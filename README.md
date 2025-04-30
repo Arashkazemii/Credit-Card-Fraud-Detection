@@ -89,6 +89,8 @@ credit-card-fraud-detection/
 ├── 📂 src/               # Source code
 │   ├── app.py           # Web application
 │   └── utils/           # Utility functions
+├── 📄 docker-compose.yml   # Docker-Compose 
+├── 📄 Dockerfile   # Dockerfile
 ├── 📄 requirements.txt   # Project dependencies
 └── 📄 LICENSE           # MIT License
 ```
@@ -100,6 +102,7 @@ credit-card-fraud-detection/
 - Python 3.8 or higher
 - pip (Python package manager)
 - Git
+- Docker and Docker Compose (for containerized deployment)
 
 ### Setup Instructions
 
@@ -109,7 +112,10 @@ git clone https://github.com/Arashkazemii/Credit-Card-Fraud-Detection
 cd Credit-Card-Fraud-Detection
 ```
 
-2. Create and activate a virtual environment:
+2. Choose one of the following installation methods:
+
+#### Method 1: Traditional Installation
+Create and activate a virtual environment:
 ```bash
 python -m venv venv
 # Windows
@@ -118,10 +124,18 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-3. Install dependencies:
+Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
+
+#### Method 2: Docker Installation
+Build and run the application using Docker Compose:
+```bash
+docker-compose up --build
+```
+
+The application will be available at `http://localhost:8050`
 
 ## 🚀 Usage
 
