@@ -183,6 +183,10 @@ def analyze_data(n_clicks, contents, selected_model):
             html.P("The uploaded file must contain Time, Amount, and Class columns")
         ]), {}, {}, html.Div()
     
+    # Prepare features and target
+    X = df.drop(['Class'], axis=1)  # Only drop the target column
+    y = df['Class']
+    
     # Load the selected model
     model_path = os.path.join(MODELS_DIR, selected_model)
     try:
@@ -192,10 +196,6 @@ def analyze_data(n_clicks, contents, selected_model):
             html.H5("Error loading model"),
             html.P(str(e))
         ]), {}, {}, html.Div()
-    
-    # Prepare features and target
-    X = df.drop(['Class', 'Time'], axis=1)
-    y = df['Class']
     
     # Make predictions
     try:
