@@ -1,0 +1,6 @@
+*.ipynb linguist-documentation
+*.py linguist-language=Python
+*.md linguist-language=Markdown
+*.yml linguist-language=YAML
+*.csv linguist-language=CSV
+
